@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('admin.dashboard')}}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('admin.dashboard') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -35,14 +35,29 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="card border-0 shadow my-5">
-            <div class="card-header bg-light">
-                <h5 class="pt-2">Dashboard</h5>
+    <div class="container my-5">
+        <div class="row">
+
+            <div class="col-lg-4 mb-3">
+                <div class="card shadow">
+                    <div class="card-header">
+                        Admin Menu
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="http://" class="card-link link-underline-light text-black">Category</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="http://" class="card-link link-underline-light text-black">Create category</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="card-body">
-                You are logged in!!
+
+            <div class="col-lg-8 mb-3">
+                @yield('content')
             </div>
+
         </div>
     </div>
 
